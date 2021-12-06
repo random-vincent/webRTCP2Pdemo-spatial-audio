@@ -1,0 +1,151 @@
+/*
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+
+ html,body {
+  width: 100vw;
+ }
+
+audio {
+  display: inline-block;
+  position: relative;
+  top: 9px;
+  width: calc(100% - 120px);
+}
+
+button {
+  margin: 0 20px 0 0;
+  width: 96px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+div#audio {
+  margin: 0 0 29px 0;
+}
+
+div#audio > div {
+  margin: 0 0 20px 0;
+}
+
+div.label {
+  display: inline-block;
+  font-weight: 400;
+  width: 120px;
+}
+
+div.graph-container {
+  float: left;
+  margin: 0.5em;
+  width: calc(50% - 1em);
+}
+
+a#viewSource {
+  clear: both;
+}
+
+.spatial-area {
+  width: 80vw;
+  height: 40vh;
+  background-color: #ccc;
+  position: relative;
+}
+.spatial-area .speaker{
+  /* width: 10px;
+  height: 10px; */
+  background-color: red;
+  position : absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%; 
+}
+
+.spatial-area .speaker{
+  width: 4px;
+  height: 4px;
+  background-color: #FFF;
+  position: absolute;
+}
+.speaker::before , .speaker:after{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #FFF;
+  position: absolute;
+  transform-origin: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+}
+.speaker:after{
+  transform: translate(-50% , -50%) rotate(90deg);
+}
+/* .tag
+position absolute
+background-color #00C
+color #FFF
+font-size xx-small
+top -80px
+left 50%
+span
+display block */
+
+
+.listener{
+  width: 16px;
+  height: 1px;
+  position: absolute;
+  transform: translate(-50%, 50%) rotate(90deg);
+  transform-origin: center bottom;
+  background-color: #F00;
+  bottom: 0;
+  left: 0;
+}
+.listener:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 1px;
+  height: 26px;
+  background-color: #F00;
+  transform: translate(-50%,0);
+}
+/* .tag
+position fixed
+top 20px
+left 50%
+background-color #0000CC
+padding 4px
+color #FFF
+font-size: xx-small
+line-height 1em */
+
+.btn{
+  margin: 20px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  display:inline-block;
+}
+
+.btn:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
